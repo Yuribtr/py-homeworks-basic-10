@@ -103,9 +103,7 @@ class VKClient:
         elif type(params) is str:
             result = params
         elif type(params) is list:
-            for param in params:
-                param = str(param)
-            result = ','.join(params)
+            result = ','.join([str(x) for x in params])
         return result
 
     @staticmethod
